@@ -86,11 +86,28 @@ def send_verify_link(user):
     return send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email], fail_silently=False)
 
 def verify(request, email, key):
+    print(f'error activation user: {email}')
     user = ShopUser.objects.filter(email=email).first()
     if user and user.activation_key == key and not user.is_activation_key_expired():
+        print(f'error activation user: {user}')
         user.is_active = True
         user.activation_key = ''
         user.activation_key_created = None
         user.save()
         auth.login(request, user)
     return render(request, 'authapp/verify.html')
+
+# def verify(request, email, key):
+#     # try:
+#         user = ShopUser.objects.filter(email=email).first()
+#         if user.activation_key == key and not user.is_activation_key_expired():
+#             user.is_active = True
+#             user.save()
+#             auth.login(request, user)
+#             return render(request, 'authapp/verify.html')
+#         else:
+#             print(f'error activation user: {user}')
+#             return render(request, 'authapp/verify.html')
+#     # except Exception as e:
+#     #     print(f'error activation user : {e.args}')
+#     #     return HttpResponseRedirect(reverse('main'))
