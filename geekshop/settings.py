@@ -145,7 +145,6 @@ EMAIL_USE_SSL = True
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'tmp/emails/'
 
-
 LOGIN_ERROR_URL = '/'
 
 SOCIAL_AUTH_VK_OAUTH2_IGNORE_DEFAULT_SCOPE = True
@@ -155,6 +154,7 @@ DOMAIN_NAME = 'http://localhost:8000'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.vk.VKOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
 )
 
 SOCIAL_AUTH_PIPELINE = (
@@ -168,7 +168,6 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 )
-
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = '7888073'
 SOCIAL_AUTH_VK_OAUTH2_SECRET = '6oh76z4CqHMdLkdJfRar'
