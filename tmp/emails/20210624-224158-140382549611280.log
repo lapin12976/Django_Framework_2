@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verify
+From: geek_47@bk.ru
+To: django@gmail.com
+Date: Thu, 24 Jun 2021 17:41:58 -0000
+Message-ID: <162455651802.40680.12870619550272746579@MacBook-Pro-Danil.local>
+
+Your linc for account activation: http://localhost:8000/auth/verify/django@gmail.com/542e619e3d1a2a4830ef736c2aaf7c5c53ddbd2f/
+-------------------------------------------------------------------------------

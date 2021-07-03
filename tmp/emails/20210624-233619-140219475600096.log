@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verify
+From: geek_47@bk.ru
+To: google34@gmail.com
+Date: Thu, 24 Jun 2021 18:36:19 -0000
+Message-ID: <162455977950.72815.14156952926865180054@MacBook-Pro-Danil.local>
+
+Your linc for account activation: http://localhost:8000/auth/verify/google34@gmail.com/234722f8cf854ba5d0dd0d47343a93b1137221fa/
+-------------------------------------------------------------------------------
