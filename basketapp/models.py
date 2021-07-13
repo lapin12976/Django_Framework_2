@@ -45,9 +45,19 @@ class Basket(models.Model):
     total_cost = property(_get_total_cost)
 
     @staticmethod
-    def get_item(pk):
-        return Basket.objects.get(pk=pk)
+    def get_item(user):
+        return Basket.objects.get(user=user).order_by('product__category')
 
+    @staticmethod
+    def get_product(user, product):
+        return Basket.objects.get(user=user, product=product)
+
+    @classmethod
+    def get_product_quantity(cls, user):
+        basket_items = cls.get_items(user)
+        basket_items_dic = {}
+        [basket_items_dic.update({item.product: item.product}) for item in basket_items]
+        return basket_items_dic
 
     def delete(self, *args, **kwargs):
         self.product.quantity += self.quantity
@@ -61,3 +71,7 @@ class Basket(models.Model):
             self.product.quantity -= self.quantity
         self.product.save()
         super().save(*args, **kwargs)
+    #
+    # @staticmethod
+    # def get_item(pk):
+    #     return Basket.objects.get(pk=pk)

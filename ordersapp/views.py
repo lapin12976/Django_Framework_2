@@ -42,6 +42,9 @@ class OrderCreate(CreateView):
                    form.initial['product'] = basket_items[num].product
                    form.initial['quantity'] = basket_items[num].quantity
                    form.initial['price'] = basket_items[num].product.price
+               for basket_item in basket_items:
+                   basket_item.delete()
+               # basket_items.delete()
            else:
                formset = OrderFormSet()
 
@@ -127,3 +130,11 @@ def forming_complete(request, pk):
 # def products_quantity_update_delete(sender, instance, **kwargs):
 #    instance.product.quantity += instance.quantity
 #    instance.product.save()
+
+def get_product_price(request, pk):
+    if request.is_ajax():
+        product = Product.objects.filter(pk=pk).first()
+        if product:
+            return JsonResponse({'price': product.price})
+        else:
+            return JsonResponse({'price': 0})

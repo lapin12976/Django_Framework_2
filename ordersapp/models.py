@@ -34,6 +34,10 @@ class Order(models.Model):
         _totalquantiti = sum(list(map(lambda x: x.quantity, _items)))
         return _totalquantiti
 
+    def get_product_type_quantity(self):
+        _items = self.orderitems.select_related()
+        return len(_items)
+
     def get_total_cost(self):
         _items = self.orderitems.select_related()
         _totalquantiti = sum(list(map(lambda x: x.get_product_cost(), _items)))
@@ -47,9 +51,9 @@ class Order(models.Model):
         self.is_active = False
         self.save()
 
-    @staticmethod
-    def get_item(pk):
-        return Order.objects.get(pk=pk)
+    # @staticmethod
+    # def get_item(pk):
+    #     return Order.objects.get(pk=pk)
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name="orderitems", on_delete=models.CASCADE)
