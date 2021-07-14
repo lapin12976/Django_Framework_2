@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verify
+From: geek_47@bk.ru
+To: yandex22@yandex.ru
+Date: Thu, 24 Jun 2021 18:40:24 -0000
+Message-ID: <162456002410.76794.17544719629831624160@1.0.0.127.in-addr.arpa>
+
+Your linc for account activation: http://localhost:8000/auth/verify/yandex22@yandex.ru/59921927d6ee2e1390a23cc76dc075d1a9e4339b/
+-------------------------------------------------------------------------------

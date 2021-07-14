@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verify
+From: geek_47@bk.ru
+To: ytre@tre.ru
+Date: Thu, 24 Jun 2021 18:22:07 -0000
+Message-ID: <162455892772.65263.16398138580036282649@1.0.0.127.in-addr.arpa>
+
+Your linc for account activation: http://localhost:8000/auth/verify/ytre@tre.ru/01badde865e0a91d5786d091703250d6132588e8/
+-------------------------------------------------------------------------------
