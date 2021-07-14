@@ -10,6 +10,7 @@ from authapp.models import ShopUser
 from geekshop import settings
 from django.core.mail import send_mail
 
+from django.db import transaction
 
 def login(request):
     title = 'вход'
