@@ -88,13 +88,13 @@ WSGI_APPLICATION = 'geekshop.wsgi.application'
 #    }
 #}
 
- DATABASES = {
+DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql',
          'NAME': 'geekshop',
          'USER': 'postgres'
      }
- }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
