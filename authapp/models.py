@@ -1,6 +1,5 @@
 from datetime import timedelta
 
-import receiver as receiver
 from django.utils.timezone import now
 from django.db import models
 from django.contrib.auth.models import AbstractUser
