@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verify
+From: geek_47@bk.ru
+To: saert@ndsf.ru
+Date: Thu, 24 Jun 2021 18:05:48 -0000
+Message-ID: <162455794894.52697.7535459398243045490@1.0.0.127.in-addr.arpa>
+
+Your linc for account activation: http://localhost:8000/auth/verify/saert@ndsf.ru/ec0abe64e5e71edbc54e3f0fb57aabcc8ff17997/
+-------------------------------------------------------------------------------
