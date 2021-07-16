@@ -37,12 +37,12 @@ def main(request):
     }
     
     return render(request, 'mainapp/index.html', content)
-    
 
-def products(request, pk=None, page=1):   
+
+def products(request, pk=None, page=1):
     title = 'продукты'
     links_menu = ProductCategory.objects.filter(is_active=True)
-    basket = get_basket(request.user)
+    basket = Basket(request.user)
            
     if pk:
         if pk == '0':
